@@ -7,6 +7,6 @@ import (
 func TestHi(t *testing.T) {
 	greeting := hi()
 	if greeting != "hello world" {
-		t.Error("Please check this code function")
+		t.Error("The code should be Hello World")
 	}
 }

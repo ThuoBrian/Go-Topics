@@ -7,6 +7,7 @@ import (
 func main() {
 
 	message := make(chan string, 2)
+
 	message <- "This is a buffered channel"
 	message <- "This is a second buffered channel"
 	msg_1 := <-message

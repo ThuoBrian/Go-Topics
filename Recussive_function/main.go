@@ -17,6 +17,8 @@ func fib(i int) (ret int) {
 func main() {
 	i := 0
 	for i = 0; i < 10; i++ {
-		fmt.Println("The values in the fibonacci", fib(i))
+		if i%2 == 0 {
+			fmt.Println("The values in the fibonacci", fib(i))
+		}
 	}
 }

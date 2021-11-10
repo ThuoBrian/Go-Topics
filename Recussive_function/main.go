@@ -15,10 +15,17 @@ func fib(i int) (ret int) {
 }
 
 func main() {
+	sum := 0
+	var x [12]int
 	i := 0
 	for i = 0; i < 10; i++ {
 		if i%2 == 0 {
-			fmt.Println("The values in the fibonacci", fib(i))
+			fmt.Println(fib(i))
 		}
+		x[i] = i
 	}
+	for _, v := range x {
+		sum += v
+	}
+	fmt.Println("the sum of the fibonacci numbers", sum)
 }

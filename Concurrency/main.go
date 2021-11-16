@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"sync"
+	"time"
 )
 
 var wg sync.WaitGroup
@@ -18,6 +19,7 @@ func main() {
 func foo() {
 	for i := 0; i < 20; i++ {
 		fmt.Println("Foo:", i)
+		time.Sleep(3 * time.Millisecond)
 	}
 	wg.Done()
 }
